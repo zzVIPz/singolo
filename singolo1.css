@@ -32,9 +32,14 @@
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html {
+  max-width: 1200px;
+  margin: 0 auto;
+
   font-family: "Lato", "Arial", serif;
 }
 
@@ -59,7 +64,7 @@ html {
 .logo-title {
   font-weight: 700;
   font-size: 1.55rem;
-  letter-spacing: -0.05rem;
+  letter-spacing: -0.04rem;
 }
 
 .logo-mark {
@@ -69,11 +74,12 @@ html {
 .header-navigation {
   padding-top: 10px;
 }
-.navigation {
+.list {
   display: flex;
 
   list-style: none;
 }
+
 .navigation-item {
   font-size: 0.75rem;
 }
@@ -95,6 +101,8 @@ html {
 }
 
 /* main */
+
+/* slider */
 
 .slider {
   display: flex;
@@ -123,4 +131,88 @@ html {
 
 .slider-content-item {
   transform: translate(5px, -5px);
+}
+
+/* services */
+
+.services {
+  padding: 0 40px;
+
+  background-color: #f2f2f2;
+  border-bottom: 6px solid #ffffff;
+}
+
+.services-header-title {
+  padding-top: 60px;
+
+  font-size: 1.875rem;
+}
+
+.services-header-description {
+  padding-top: 20px;
+
+  font-weight: 300;
+  font-size: 1.125rem;
+  line-height: 1.875rem;
+  color: #767e9e;
+  letter-spacing: -0.003rem;
+}
+
+.services-list {
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 44px;
+  padding-bottom: 32px;
+}
+.services-item {
+  max-width: 300px;
+  margin-bottom: 30px;
+  padding-left: 80px;
+}
+
+.title {
+  font-weight: 900;
+  color: #666d89;
+}
+
+.services-subtitle {
+  font-size: 1.125rem;
+}
+
+.services-item:nth-child(5) .services-subtitle {
+  letter-spacing: -0.034rem;
+}
+
+.text-description {
+  padding-top: 10px;
+
+  font-weight: 400;
+  font-size: 0.75rem;
+  line-height: 1.37rem;
+  text-align: justify;
+  color: #767e9e;
+}
+
+.item-custom-design {
+  background: url("./assets/services/Pen.svg") no-repeat 0 2px;
+}
+
+.item-innovative-ideas {
+  background: url("./assets/services/Bulb.svg") no-repeat -1px 2px;
+}
+
+.item-love-is-the-answer {
+  background: url("./assets/services/Heart.svg") no-repeat -1px 2px;
+}
+
+.item-responsive-layout {
+  background: url("./assets/services/Phone.svg") no-repeat 0 2px;
+}
+
+.item-support {
+  background: url("./assets/services/Bubble.svg") no-repeat -1px 2px;
+}
+
+.item-like-star {
+  background: url("./assets/services/Star.svg") no-repeat -1px 2px;
 }

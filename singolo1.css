@@ -47,6 +47,7 @@ html {
 
 .header {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   padding: 14px 40px;
@@ -79,6 +80,7 @@ html {
 
 .list {
   display: flex;
+  flex-wrap: wrap;
 
   list-style: none;
 }
@@ -149,6 +151,14 @@ html {
   padding: 0 54px;
 }
 
+.phone1 {
+  max-width: 35%;
+}
+
+.phone2 {
+  max-width: 65%;
+}
+
 /* services */
 
 .services {
@@ -175,7 +185,6 @@ html {
 }
 
 .services-list {
-  flex-wrap: wrap;
   justify-content: space-between;
   padding-top: 43px;
   padding-bottom: 32px;

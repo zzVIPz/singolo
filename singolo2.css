@@ -104,27 +104,18 @@ html {
 .portfolio-samples {
   display: flex;
   justify-content: space-between;
-  width: 940px;
+  max-width: 940px;
+  margin: auto;
   padding-top: 23px;
 }
+
 .portfolio-item {
   margin-bottom: 17px;
 }
 
-@media (max-width: 1019px) {
-  .portfolio-samples,
-  .portfolio-tags {
-    justify-content: center;
-    width: auto;
-  }
-
-  .portfolio-item {
-    margin-right: 23px;
-  }
-
-  .portfolio-tag {
-    margin-bottom: 11px;
-  }
+.portfolio-image {
+  width: 220px;
+  height: 187px;
 }
 
 /* about-us */
@@ -145,6 +136,11 @@ html {
 .about-us-list {
   justify-content: space-between;
   padding-top: 45px;
+}
+
+.about-us-image {
+  width: 300px;
+  height: 300px;
 }
 
 .about-us-subtitle {
@@ -190,4 +186,36 @@ html {
   brightness(103%) contrast(107%);
 
   transition: all 0.2s ease;
+}
+
+/* responsive */
+
+@media (max-width: 1019px) {
+  .about-us-list {
+    justify-content: space-around;
+  }
+  .portfolio-samples,
+  .portfolio-tags {
+    justify-content: center;
+  }
+
+  .portfolio-item {
+    margin-right: 23px;
+  }
+
+  .portfolio-tag {
+    margin-bottom: 11px;
+  }
+
+  .about-us-item {
+    margin-right: 15px;
+    padding-bottom: 15px;
+  }
+}
+
+@media (max-width: 350px) {
+  .about-us-image {
+    width: 200px;
+    height: 200px;
+  }
 }

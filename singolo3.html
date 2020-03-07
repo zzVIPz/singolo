@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="singolo2.css">
+  <link rel="stylesheet" href="singolo3.css">
   <title>Singolo Part 3</title>
 </head>
 
@@ -18,25 +18,40 @@
       porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris
       condimentum nibh.
     </p>
-    <div class="wrapper">
-      <form class="contacts-form" action="#" method="post">
-        <input type="text" name="username" placeholder="Name (Required)" required>
-        <input type="email" name="email" placeholder="Email (Required)" required>
-        <input type="text" name="subject" placeholder="Subject">
-        <textarea name="" cols="30" rows="10"></textarea>
+    <div class="contacts-form">
+      <form class="form" action="#" method="post">
+        <input class="contacts-item input-username" type="text" name="username" placeholder="Name (Required)" required>
+        <input class="contacts-item input-email" type="email" name="email" placeholder="Email (Required)" required>
+        <input class="contacts-item" type="text" name="subject" placeholder="Subject">
+        <textarea class="contacts-item contacts-item-textarea" name="textarea"
+          placeholder="Describe your project in detail..."></textarea>
+        <input class="contacts-item input-submit" type="submit" value="Submit">
       </form>
       <div class="contacts-information">
-        <h3 class="contacts-subtitle subtitle title">
+        <h3 class="contacts-subtitle subtitle">
           Contact Information
         </h3>
-        <p class="text-description ">
-          Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus. Proin sit
+        <p class="text-description contacts-text-description">
+          Quisque hendrerit purus dapibus, ornare nibh vitae, viver&shy;ra nibh. Fusce vitae aliquam tellus. Proin sit
           amet volutpat libero. Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis.
         </p>
         <ul class="contacts-list list">
-          <li class="contacts-list-item"><a href="#" class="contacts-list-link"></a></li>
-          <li class="contacts-list-item"><a href="#" class="contacts-list-link"></a></li>
-          <li class="contacts-list-item"><a href="#" class="contacts-list-link"></a></li>
+          <li class="contacts-list-item">
+            <a class="contacts-list-link link link-location"
+              href="https://www.google.com/maps/search/?ll=53.902455,27.561651" target="_blank">
+              Elm St. 14/05 Lost City
+            </a>
+          </li>
+          <li class="contacts-list-item">
+            <a class="contacts-list-link link link-phone" href="tel:035283318635">
+              03528 331 86 35
+            </a>
+          </li>
+          <li class="contacts-list-item">
+            <a href="mailto:info@singolo.com" class="contacts-list-link link link-mail">
+              info@singolo.com
+            </a>
+          </li>
         </ul>
       </div>
     </div>
@@ -44,7 +59,10 @@
   <footer class="footer">
     <p class="text-description "></p>
     <ul class="social-networks list">
-      <li class="social-networks-item item-facebook"><a href="#" class="social-networks-link"></a></li>
+      <li class="social-networks-item item-facebook">
+        <a href="#" class="social-networks-link">
+        </a>
+      </li>
       <li class="social-networks-item item-google"><a href="#" class="social-networks-link"></a></li>
       <li class="social-networks-item item-twitter"><a href="#" class="social-networks-link"></a></li>
       <li class="social-networks-item item-linkedin"><a href="#" class="social-networks-link"></a></li>

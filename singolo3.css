@@ -203,11 +203,71 @@ html {
   opacity: 0.7;
 }
 
+/* footer  */
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 21px 40px 22px;
+
+  background-color: #2d303a;
+}
+
+.footer .text-description {
+  padding: 6px 0 0 1px;
+
+  color: #666d89;
+}
+
+.social-networks-link {
+  display: block;
+  width: 33px;
+  height: 33px;
+}
+
+.item-facebook {
+  background: url("./assets/footer/facebook.svg") no-repeat;
+}
+
+.item-google {
+  background: url("./assets/footer/google.svg") no-repeat;
+}
+
+.item-twitter {
+  background: url("./assets/footer/twitter.svg") no-repeat;
+}
+
+.item-linkedin {
+  background: url("./assets/footer/linkedin.svg") no-repeat;
+}
+
+.social-networks-item {
+  margin-left: 7px;
+}
+
+.item-facebook:hover,
+.item-google:hover,
+.item-twitter:hover,
+.item-linkedin:hover {
+  filter: invert(86%) sepia(19%) saturate(1248%) hue-rotate(160deg)
+  brightness(103%) contrast(107%);
+
+  transition: all 0.2s ease;
+}
+
 @media (max-width: 627px) {
   .contacts-form {
     flex-direction: column-reverse;
   }
   .contacts-information {
     padding-bottom: 15px;
+  }
+}
+
+@media (max-width: 335px) {
+  .footer {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
   }
 }

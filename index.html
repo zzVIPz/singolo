@@ -11,29 +11,30 @@
 
 <body>
 
-  <header class="header">
+  <header class="header" id="header">
     <a class="logo-link link" href="#">
       <h1 class="logo-title">SINGOLO<span class="logo-mark">*</span></h1>
     </a>
     <nav class="header-navigation">
       <ul class="navigation list">
         <li class="navigation-item">
-          <a class="navigation-link navigation-link-active link" href="#">HOME</a>
+          <a class="navigation-link navigation-link-active link" href="#header">HOME</a>
         </li>
         <li class="navigation-item">
-          <a class="navigation-link link" href="#">SERVICES</a>
+          <a class="navigation-link link" href="#services">SERVICES</a>
         </li>
         <li class="navigation-item">
-          <a class="navigation-link link" href="#">PORTFOLIO</a>
+          <a class="navigation-link link" href="#portfolio">PORTFOLIO</a>
         </li>
         <li class="navigation-item">
-          <a class="navigation-link link" href="#">ABOUT</a>
+          <a class="navigation-link link" href="#about-us">ABOUT</a>
         </li>
         <li class="navigation-item">
-          <a class="navigation-link link" href="#">CONTACT</a>
+          <a class="navigation-link link" href="#contacts">CONTACT</a>
         </li>
       </ul>
     </nav>
+
   </header>
 
   <main class="main">
@@ -48,7 +49,7 @@
       <a class="slider-arrow slider-arrow-next" href="#"></a>
     </div>
 
-    <section class="services">
+    <section class="services" id="services">
       <header class="services-header">
         <h2 class="services-title title">Our Services</h2>
         <p class="services-description">
@@ -98,7 +99,7 @@
       </ul>
     </section>
 
-    <section class="portfolio">
+    <section class="portfolio" id="portfolio">
       <h2 class="portfolio-title title">Portfolio</h2>
       <p class="portfolio-description description">
         Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget laciana odio sem nec elit.
@@ -180,7 +181,7 @@
       </ul>
     </section>
 
-    <section class="about-us">
+    <section class="about-us" id="about-us">
       <h2 class="about-us-title title">About Us</h2>
       <p class="about-us-description description">
         Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat
@@ -242,7 +243,7 @@
       </ul>
     </section>
 
-    <section class="contacts">
+    <section class="contacts" id="contacts">
       <h2 class="contacts-title title">Get a Quote</h2>
       <p class="contacts-description description">
         Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat
@@ -297,6 +298,8 @@
       <li class="social-networks-item item-linkedin"><a href="#" class="social-networks-link"></a></li>
     </ul>
   </footer>
+
+  <script src="./script.js"></script>
 </body>
 
 </html>

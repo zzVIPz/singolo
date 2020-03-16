@@ -43,6 +43,10 @@ html {
   font-family: "Lato", "Arial", serif;
 }
 
+a {
+  cursor: pointer;
+}
+
 .title {
   font-weight: 900;
   font-size: 1.875rem;
@@ -353,6 +357,12 @@ html {
 .portfolio-image {
   width: 220px;
   height: 187px;
+
+  border: 5px solid transparent;
+}
+
+.portfolio-image-active {
+  border: 5px solid #f06c64;
 }
 
 /* about-us */

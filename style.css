@@ -204,11 +204,36 @@ a {
 }
 
 .slide {
+  position: relative;
+
   display: flex;
   flex: 1;
   justify-content: space-between;
   align-items: center;
   padding: 0 54px;
+}
+.screen-vertical {
+  position: absolute;
+  top: 68px;
+  left: 70px;
+  z-index: 1;
+
+  width: 188px;
+  height: 333px;
+
+  background-color: transparent;
+}
+
+.screen-horizontal {
+  position: absolute;
+  top: 137px;
+  right: 146px;
+  z-index: 1;
+
+  width: 333px;
+  height: 190px;
+
+  background-color: transparent;
 }
 
 .phone-vertical {

@@ -2,6 +2,7 @@ window.onload = () => {
   mainNavigationClickHandler();
   portfolioTabsClickHandler();
   portfolioSampleClickHandler();
+  phonesScreenStateClickHandler();
 };
 
 //interactive main navigation
@@ -15,6 +16,27 @@ const mainNavigationClickHandler = () => {
         .forEach(el => el.classList.remove("navigation-link-active"));
     event.target.classList.add("navigation-link-active");
   });
+};
+
+// on/off screen phone
+const slidePhones = document.querySelector(".slide");
+const phonesScreenStateClickHandler = () => {
+  slidePhones.addEventListener("click", event => {
+    if (event.target.classList.contains("screen-vertical"))
+      setPhoneScreenState(event.target);
+    if (event.target.classList.contains("screen-horizontal"))
+      setPhoneScreenState(event.target);
+  });
+};
+
+const setPhoneScreenState = target => {
+  if (
+    window.getComputedStyle(target, null).backgroundColor === "rgba(0, 0, 0, 0)"
+  ) {
+    target.style.backgroundColor = "#000000";
+  } else {
+    target.style.backgroundColor = "transparent";
+  }
 };
 
 //interactive portfolio tabs

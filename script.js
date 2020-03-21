@@ -83,7 +83,6 @@ const phonesScreenStateClickHandler = () => {
 };
 
 const setPhoneScreenState = target => {
-  s;
   if (
     window.getComputedStyle(target, null).backgroundColor === "rgba(0, 0, 0, 0)"
   ) {

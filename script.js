@@ -83,7 +83,6 @@ const phonesScreenStateClickHandler = () => {
 };
 
 const setPhoneScreenState = target => {
-  s;
   if (
     window.getComputedStyle(target, null).backgroundColor === "rgba(0, 0, 0, 0)"
   ) {
@@ -158,10 +157,6 @@ const pressBtnSubmitHandler = () => {
     getModalWindow(dataForLetter);
   });
 };
-
-// function submitForm(event) {
-//   event.preventDefault();
-// }
 
 const getDataForLetter = () => {
   let subject = form.querySelector("#subject").value;

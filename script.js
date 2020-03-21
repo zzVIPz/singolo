@@ -159,10 +159,6 @@ const pressBtnSubmitHandler = () => {
   });
 };
 
-// function submitForm(event) {
-//   event.preventDefault();
-// }
-
 const getDataForLetter = () => {
   let subject = form.querySelector("#subject").value;
   let message = form.querySelector("#message").value;

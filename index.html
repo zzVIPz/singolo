@@ -11,44 +11,49 @@
 
 <body>
 
-  <header class="header">
+  <header class="header" id="home">
     <a class="logo-link link" href="#">
       <h1 class="logo-title">SINGOLO<span class="logo-mark">*</span></h1>
     </a>
     <nav class="header-navigation">
       <ul class="navigation list">
         <li class="navigation-item">
-          <a class="navigation-link navigation-link-active link" href="#">HOME</a>
+          <a class="navigation-link navigation-link-active link" href="#home">HOME</a>
         </li>
         <li class="navigation-item">
-          <a class="navigation-link link" href="#">SERVICES</a>
+          <a class="navigation-link link" href="#services">SERVICES</a>
         </li>
         <li class="navigation-item">
-          <a class="navigation-link link" href="#">PORTFOLIO</a>
+          <a class="navigation-link link" href="#portfolio">PORTFOLIO</a>
         </li>
         <li class="navigation-item">
-          <a class="navigation-link link" href="#">ABOUT</a>
+          <a class="navigation-link link" href="#about">ABOUT</a>
         </li>
         <li class="navigation-item">
-          <a class="navigation-link link" href="#">CONTACT</a>
+          <a class="navigation-link link" href="#contact">CONTACT</a>
         </li>
       </ul>
     </nav>
+
   </header>
 
   <main class="main">
 
     <div class="slider">
-      <a class="slider-arrow slider-arrow-prev" href="#"></a>
+      <a class="slider-arrow slider-arrow-prev"></a>
       <div class="slide">
         <img class="slider-content phone-vertical" src="./assets/slider/iPhone_Vertical.png" alt="iPhone Vertical">
+        <div class="screen-vertical"></div>
         <img class="slider-content phone-horizontal" src="./assets/slider/iPhone_Horizontal.png"
           alt="iPhone Horizontal">
+        <div class="screen-horizontal"></div>
       </div>
-      <a class="slider-arrow slider-arrow-next" href="#"></a>
+      <div class="second-slide slide">
+        <img class="slider-content phone-iphones" src="./assets/slider/iphones.png" alt="iPhones">
+      </div>
+      <a class="slider-arrow slider-arrow-next"></a>
     </div>
-
-    <section class="services">
+    <section class="services" id="services">
       <header class="services-header">
         <h2 class="services-title title">Our Services</h2>
         <p class="services-description">
@@ -98,89 +103,89 @@
       </ul>
     </section>
 
-    <section class="portfolio">
+    <section class="portfolio" id="portfolio">
       <h2 class="portfolio-title title">Portfolio</h2>
       <p class="portfolio-description description">
         Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget laciana odio sem nec elit.
       </p>
       <ul class="portfolio-tags list">
         <li class="portfolio-tag">
-          <a class="portfolio-link portfolio-link-active link" href="#">All</a>
+          <a class="portfolio-link portfolio-link-active link">All</a>
         </li>
         <li class="portfolio-tag">
-          <a class="portfolio-link link" href="#">Web Design</a>
+          <a class="portfolio-link link">Web Design</a>
         </li>
         <li class="portfolio-tag">
-          <a class="portfolio-link link" href="#">Graphic Design</a>
+          <a class="portfolio-link link">Graphic Design</a>
         </li>
         <li class="portfolio-tag">
-          <a class="portfolio-link link" href="#">Artwork</a>
+          <a class="portfolio-link link">Artwork</a>
         </li>
       </ul>
       <ul class="portfolio-samples list">
         <li class="portfolio-item">
-          <a href="#" class="link">
+          <a class="link">
             <img class="portfolio-image" src="./assets/portfolio/ship.jpg" alt="Ship">
           </a>
         </li>
         <li class="portfolio-item">
-          <a href="#" class="link">
+          <a class="link">
             <img class="portfolio-image" src="./assets/portfolio/girl.jpg" alt="Girl">
           </a>
         </li>
         <li class="portfolio-item">
-          <a href="#" class="link">
+          <a class="link">
             <img class="portfolio-image" src="./assets/portfolio/town.jpg" alt="Town">
           </a>
         </li>
         <li class="portfolio-item">
-          <a href="#" class="link">
+          <a class="link">
             <img class="portfolio-image" src="./assets/portfolio/robot.jpg" alt="Robot">
           </a>
         </li>
         <li class="portfolio-item">
-          <a href="#" class="link">
+          <a class="link">
             <img class="portfolio-image" src="./assets/portfolio/animals.jpg" alt="Animals">
           </a>
         </li>
         <li class="portfolio-item">
-          <a href="#" class="link">
+          <a class="link">
             <img class="portfolio-image" src="./assets/portfolio/technologies.jpg" alt="Technologies">
           </a></li>
         <li class="portfolio-item">
-          <a href="#" class="link">
+          <a class="link">
             <img class="portfolio-image" src="./assets/portfolio/space.jpg" alt="Space">
           </a>
         </li>
         <li class="portfolio-item">
-          <a href="#" class="link">
+          <a class="link">
             <img class="portfolio-image" src="./assets/portfolio/chickens.jpg" alt="Chickens">
           </a>
         </li>
         <li class="portfolio-item">
-          <a href="#" class="link">
+          <a class="link">
             <img class="portfolio-image" src="./assets/portfolio/dragon.jpg" alt="Dragon">
           </a>
         </li>
         <li class="portfolio-item">
-          <a href="#" class="link">
+          <a class="link">
             <img class="portfolio-image" src="./assets/portfolio/tape.jpg" alt="Tape">
           </a>
         </li>
         <li class="portfolio-item">
-          <a href="#" class="link">
+          <a class="link">
             <img class="portfolio-image" src="./assets/portfolio/monster.jpg" alt="Monster">
           </a>
         </li>
         <li class="portfolio-item">
-          <a href="#" class="link">
+          <a class="link">
             <img class="portfolio-image" src="./assets/portfolio/meter.jpg" alt="Meter">
           </a>
         </li>
       </ul>
     </section>
 
-    <section class="about-us">
+    <section class="about-us" id="about">
       <h2 class="about-us-title title">About Us</h2>
       <p class="about-us-description description">
         Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat
@@ -229,7 +234,7 @@
               <h3 class="about-us-subtitle title">Scolara Visari</h3>
             </figcaption>
           </figure>
-          <p class="text-description ">
+          <p class="text-description">
             Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. Quisque condimentum.
           </p>
           <ul class="social-networks list">
@@ -242,7 +247,7 @@
       </ul>
     </section>
 
-    <section class="contacts">
+    <section class="contacts" id="contact">
       <h2 class="contacts-title title">Get a Quote</h2>
       <p class="contacts-description description">
         Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat
@@ -250,12 +255,13 @@
         condimentum nibh.
       </p>
       <div class="contacts-form">
-        <form class="form" action="#" method="post">
-          <input class="contacts-item input-username" type="text" name="username" placeholder="Name (Required)"
+        <form class="form" id="form" method="post">
+          <input class="contacts-item input-username" type="text" id="username" name="username"
+            placeholder="Name (Required)" required>
+          <input class="contacts-item input-email" type="email" id="email" name="email" placeholder="Email (Required)"
             required>
-          <input class="contacts-item input-email" type="email" name="email" placeholder="Email (Required)" required>
-          <input class="contacts-item" type="text" name="subject" placeholder="Subject">
-          <textarea class="contacts-item contacts-item-textarea" name="message"
+          <input class="contacts-item" type="text" id="subject" name="subject" placeholder="Subject">
+          <textarea class="contacts-item contacts-item-textarea" id="message" name="message"
             placeholder="Describe your project in detail..."></textarea>
           <input class="contacts-item input-submit" type="submit" value="Submit">
         </form>
@@ -297,6 +303,8 @@
       <li class="social-networks-item item-linkedin"><a href="#" class="social-networks-link"></a></li>
     </ul>
   </footer>
+
+  <script src="./script.js"></script>
 </body>
 
 </html>

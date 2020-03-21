@@ -1,8 +1,11 @@
 window.onload = () => {
   mainNavigationClickHandler();
+  changeNavigationLinkOnScroll();
   portfolioTabsClickHandler();
   portfolioSampleClickHandler();
   phonesScreenStateClickHandler();
+  changeSlideClickHandler();
+  pressBtnSubmitHandler();
 };
 
 //interactive main navigation
@@ -18,7 +21,57 @@ const mainNavigationClickHandler = () => {
   });
 };
 
-// on/off screen phone
+//change Navigation Link On Scroll
+const anсhors = ["#home", "#services", "#portfolio", "#about", "#contact"];
+
+const changeNavigationLinkOnScroll = () => {
+  document.addEventListener("scroll", event => {
+    const anсhorsPositions = [];
+
+    anсhors.forEach(el => {
+      anсhorsPositions.push(document.querySelector(el).offsetTop - 95);
+    });
+    anсhorsPositions[0] = 0;
+
+    for (let i = 0; i < anсhorsPositions.length; i++) {
+      if (window.scrollY <= anсhorsPositions[i + 1]) {
+        const navigationLinkList = mainNavigation.querySelectorAll(
+          ".navigation-link"
+        );
+        navigationLinkList.forEach(el =>
+          el.classList.remove("navigation-link-active")
+        );
+        navigationLinkList[i].classList.add("navigation-link-active");
+        break;
+      }
+    }
+  });
+};
+
+//change slides on click
+const slider = document.querySelector(".slider");
+const changeSlideClickHandler = () => {
+  slider.addEventListener("click", event => {
+    if (event.target.classList.contains("slider-arrow")) {
+      if (
+        window.getComputedStyle(event.target.parentNode.children[1], null)
+          .display === "flex"
+      ) {
+        event.target.parentNode.children[1].style.display = "none";
+        event.target.parentNode.children[2].style.display = "contents";
+        event.target.parentNode.style.backgroundColor = "#648BF0";
+        event.target.parentNode.style.borderBottom = "6px solid #4e7cf3";
+      } else {
+        event.target.parentNode.children[1].style.display = "flex";
+        event.target.parentNode.children[2].style.display = "none";
+        event.target.parentNode.style.backgroundColor = "#f06c64";
+        event.target.parentNode.style.borderBottom = "6px solid #ea676b";
+      }
+    }
+  });
+};
+
+// on/off screens phone
 const slidePhones = document.querySelector(".slide");
 const phonesScreenStateClickHandler = () => {
   slidePhones.addEventListener("click", event => {
@@ -30,6 +83,7 @@ const phonesScreenStateClickHandler = () => {
 };
 
 const setPhoneScreenState = target => {
+  s;
   if (
     window.getComputedStyle(target, null).backgroundColor === "rgba(0, 0, 0, 0)"
   ) {
@@ -67,7 +121,6 @@ const portfolioTabsClickHandler = () => {
 };
 
 const getShuffleArray = array => {
-  console.log(1, typeof array);
   for (let i = array.length - 1; i > 0; i--) {
     let j = Math.floor(Math.random() * (i + 1));
     [array[i], array[j]] = [array[j], array[i]];
@@ -77,7 +130,6 @@ const getShuffleArray = array => {
 
 //add a border for a selected image
 let portfolioSampleSelected = undefined;
-console.log("1111", portfolioSampleSelected);
 const portfolioSampleClickHandler = () => {
   portfolioSamples.addEventListener("click", event => {
     if (event.target.classList.contains("portfolio-image"))
@@ -91,4 +143,47 @@ const portfolioSampleClickHandler = () => {
       portfolioSampleSelected = undefined;
     }
   });
+};
+
+//modal window
+const form = document.querySelector(".form");
+
+// const dataForLetter = getDataForLetter();
+// getModalWindow(dataForLetter);
+// const btnSubmit = form.querySelector(".input-submit");
+const pressBtnSubmitHandler = () => {
+  form.addEventListener("submit", event => {
+    event.preventDefault();
+    const dataForLetter = getDataForLetter();
+    getModalWindow(dataForLetter);
+  });
+};
+
+// function submitForm(event) {
+//   event.preventDefault();
+// }
+
+const getDataForLetter = () => {
+  let subject = form.querySelector("#subject").value;
+  let message = form.querySelector("#message").value;
+  return {
+    subject,
+    message
+  };
+};
+
+const getModalWindow = dataForLetter => {
+  const ModalWindow = document.createDocumentFragment();
+  let title = document.createElement("h3");
+  title.innerText = "The letter was sent";
+  let subject = document.createElement("p");
+  subject.innerText = dataForLetter.subject
+    ? `Subject: ${dataForLetter.subject}`
+    : "Without subject";
+  let message = document.createElement("p");
+  message.innerText = dataForLetter.subject
+    ? `Description: ${dataForLetter.message}`
+    : "Without description";
+
+  ModalWindow.appendChild(title, subject, message);
 };

@@ -116,12 +116,19 @@ a {
   transition: all 0.2s ease;
 }
 
+#services,
+#portfolio,
+#about,
+#contacts {
+  scroll-margin-top: 90px;
+}
+
 /* header */
 
 .header {
   position: sticky;
   top: 0;
-  z-index: 1;
+  z-index: 3;
 
   display: flex;
   flex-wrap: wrap;
@@ -212,6 +219,15 @@ a {
   align-items: center;
   padding: 0 54px;
 }
+
+.second-slide {
+  display: none;
+}
+
+.phone-iphones {
+  height: 487px;
+}
+
 .screen-vertical {
   position: absolute;
   top: 68px;

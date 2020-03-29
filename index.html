@@ -12,6 +12,11 @@
 <body>
 
   <header class="header" id="home">
+    <div class="burger-menu">
+      <span class="burger-menu-line"></span>
+      <span class="burger-menu-line"></span>
+      <span class="burger-menu-line"></span>
+    </div>
     <a class="logo-link link" href="#">
       <h1 class="logo-title">SINGOLO<span class="logo-mark">*</span></h1>
     </a>
@@ -41,15 +46,31 @@
 
     <div class="slider">
       <a class="slider-arrow slider-arrow-prev"></a>
-      <div class="slide">
-        <img class="slider-content phone-vertical" src="./assets/slider/iPhone_Vertical.png" alt="iPhone Vertical">
-        <div class="screen-vertical"></div>
-        <img class="slider-content phone-horizontal" src="./assets/slider/iPhone_Horizontal.png"
-          alt="iPhone Horizontal">
-        <div class="screen-horizontal"></div>
-      </div>
-      <div class="second-slide slide">
-        <img class="slider-content phone-iphones" src="./assets/slider/iphones.png" alt="iPhones">
+      <div class="slide-wrapper">
+        <div class="slide first-slide slide-active" id="slide-1">
+          <div class="phones-wrapper">
+            <div class="vertical-iphone">
+              <img class="slider-content phone-vertical-shadow" src="./assets/slider/phone-vertical-shadow.png"
+                alt="iPhone Vertical">
+              <img class="slider-content phone-vertical" src="./assets/slider/vertical-phone.png" alt="iPhone Vertical">
+              <img class="slider-content phone-vertical-display" src="./assets/slider/phone-vertical-display.png"
+                alt="iPhone Vertical">
+            </div>
+            <div class="horizontal-iphone">
+              <img class="slider-content phone-horizontal-shadow" src="./assets/slider/phone-vertical-shadow.png"
+                alt="iPhone Vertical">
+              <img class="slider-content phone-horizontal" src="./assets/slider/vertical-phone.png"
+                alt="iPhone Vertical">
+              <img class="slider-content phone-horizontal-display" src="./assets/slider/phone-horizontal-display.png"
+                alt="iPhone Vertical">
+            </div>
+          </div>
+        </div>
+        <div class="slide second-slide" id="slide-2">
+          <div class="iphones">
+            <img class="phone-iphones" src="./assets/slider/iphones.png" alt="iPhones">
+          </div>
+        </div>
       </div>
       <a class="slider-arrow slider-arrow-next"></a>
     </div>
@@ -57,7 +78,8 @@
       <header class="services-header">
         <h2 class="services-title title">Our Services</h2>
         <p class="services-description">
-          Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat
+          Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi
+          erat
           porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris
           condimentum nibh.
         </p>
@@ -66,7 +88,8 @@
         <li class="services-item item-design">
           <h3 class="services-subtitle title">Custom Design</h3>
           <p class="text-description">
-            Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, viverra lacus ut, ultrices velit.
+            Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, viverra lacus ut, ultrices
+            velit.
           </p>
         </li>
         <li class="services-item item-ideas">
@@ -78,7 +101,8 @@
         <li class="services-item item-answer">
           <h3 class="services-subtitle title">Love Is The Answer</h3>
           <p class="text-description">
-            Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. Quisque condimentum.
+            Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. Quisque
+            condimentum.
           </p>
         </li>
         <li class="services-item item-layout">
@@ -90,7 +114,8 @@
         <li class="services-item item-support">
           <h3 class="services-subtitle title">24 / 7 Support</h3>
           <p class="text-description">
-            Vivamus vel quam lacinia, tincidunt dui non, vehicula nisi. Nulla a sem erat. Pellentesque egestas venenatis
+            Vivamus vel quam lacinia, tincidunt dui non, vehicula nisi. Nulla a sem erat. Pellentesque egestas
+            venenatis
             lorem.
           </p>
         </li>
@@ -218,7 +243,8 @@
             </figcaption>
           </figure>
           <p class="text-description ">
-            Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, viverra lacus ut, ultrices velit.
+            Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, viverra lacus ut, ultrices
+            velit.
           </p>
           <ul class="social-networks list">
             <li class="social-networks-item item-facebook"><a href="#" class="social-networks-link"></a></li>
@@ -235,7 +261,8 @@
             </figcaption>
           </figure>
           <p class="text-description">
-            Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. Quisque condimentum.
+            Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. Quisque
+            condimentum.
           </p>
           <ul class="social-networks list">
             <li class="social-networks-item item-facebook"><a href="#" class="social-networks-link"></a></li>
@@ -268,8 +295,10 @@
         <div class="contacts-information">
           <h3 class="contacts-subtitle title">Contact Information</h3>
           <p class="text-description contacts-text-description">
-            Quisque hendrerit purus dapibus, ornare nibh vitae, viver&shy;ra nibh. Fusce vitae aliquam tellus. Proin sit
-            amet volutpat libero. Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis.
+            Quisque hendrerit purus dapibus, ornare nibh vitae, viver&shy;ra nibh. Fusce vitae aliquam tellus. Proin
+            sit
+            amet volutpat libero. Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat
+            felis.
           </p>
           <ul class="contacts-list list">
             <li class="contacts-list-item">
@@ -295,7 +324,7 @@
   </main>
 
   <footer class="footer">
-    <p class="text-description">&copy; Copyright 2013</p>
+    <p class="text-description footer-copyright">&copy; Copyright 2013</p>
     <ul class="social-networks list">
       <li class="social-networks-item item-facebook"><a href="#" class="social-networks-link"></a></li>
       <li class="social-networks-item item-google"><a href="#" class="social-networks-link"></a></li>

@@ -5,6 +5,9 @@ window.onload = () => {
   phonesScreenClickHandler();
   pressBtnSliderClickHandler();
   pressBtnSubmitHandler();
+  burgerMenuClickHandler();
+  mobileViewOverlayPressHandler();
+  navigationLinkPressHandler();
 };
 
 //change active navigation link on scroll
@@ -172,7 +175,8 @@ const portfolioSampleClickHandler = () => {
 };
 
 //modal window
-const form = document.querySelector(".form");
+const form = document.querySelector("#form");
+
 const pressBtnSubmitHandler = () => {
   form.addEventListener("submit", event => {
     event.preventDefault();
@@ -190,20 +194,23 @@ const getDataForLetter = () => {
 };
 
 const showModalWindow = () => {
-  document.body.appendChild(createModalWindowTemplate());
+  const overlay = showOverlay();
+  overlay.appendChild(createModalWindowTemplate());
+  pressOverlayHandler(overlay);
   pressBtnCloseModalWindow();
 };
 
-const setStyleForOverflow = () => {
-  document.body.style.overflow = "hidden";
-  // document.body.style.width = document.body.offsetWidth + "px";
+const showOverlay = () => {
+  document.body.style.width = `${document.body.offsetWidth}px`;
+  const overlay = document.createElement("div");
+  overlay.classList.add("overlay");
+  document.body.appendChild(overlay);
+  document.body.classList.toggle("overflow-hidden");
+  return overlay;
 };
 
 const createModalWindowTemplate = () => {
-  const ModalWindowFragment = document.createDocumentFragment();
   const data = getDataForLetter();
-  const overlay = document.createElement("div");
-  overlay.classList.add("overlay");
   const modalWindow = document.createElement("div");
   modalWindow.classList.add("modal-window");
   const title = document.createElement("h3");
@@ -220,23 +227,80 @@ const createModalWindowTemplate = () => {
   const btnModalWindow = document.createElement("button");
   btnModalWindow.classList.add("button-modal");
   btnModalWindow.innerText = "OK";
-  overlay.appendChild(modalWindow);
   modalWindow.append(title, subject, message, btnModalWindow);
-  ModalWindowFragment.appendChild(overlay);
-  return ModalWindowFragment;
+  return modalWindow;
 };
 
 const pressBtnCloseModalWindow = () => {
   const btnModalWindow = document.querySelector(".button-modal");
   btnModalWindow.addEventListener("click", () => {
-    const modalWindowTemplate = document.querySelector(".overlay");
-    modalWindowTemplate.remove();
-    document.body.style.overflow = "auto";
+    const overlay = document.querySelector(".overlay");
+    overlay.remove();
+    document.body.classList.toggle("overflow-hidden");
     resetFormByDefault();
   });
 };
 
 const resetFormByDefault = () => {
-  const form = document.querySelector("#form");
   form.reset();
+};
+
+// burger menu
+const burgerMenu = document.querySelector(".burger-menu");
+const header = document.querySelector(".header");
+const headerNavigation = document.querySelector(".header-navigation");
+const navigation = document.querySelector(".navigation");
+
+const burgerMenuClickHandler = () => {
+  burgerMenu.addEventListener("click", event => {
+    toggleMobileMenuProperty();
+  });
+};
+
+const navigationLinkPressHandler = () => {
+  header.addEventListener("click", event => {
+    if (
+      (event.target.classList.contains("logo-title") ||
+        event.target.classList.contains("navigation-link")) &&
+      headerNavigation.classList.contains("header-navigation-active")
+    )
+      toggleMobileMenuProperty(event.target);
+  });
+};
+
+const mobileViewOverlayPressHandler = () => {
+  headerNavigation.addEventListener("click", event => {
+    if (event.target.classList.contains("header-navigation-active"))
+      toggleMobileMenuProperty();
+  });
+};
+
+const toggleMobileMenuProperty = node => {
+  document.body.style.width = `${document.body.offsetWidth}px`;
+  document.body.classList.toggle("overflow-hidden");
+  burgerMenu.classList.toggle("burger-menu-active");
+  header.classList.toggle("header-active");
+  navigation.classList.toggle("navigation-active");
+  if (node && node.classList.contains("navigation-link")) {
+    headerNavigation.classList.toggle("header-navigation-active");
+  } else {
+    if (headerNavigation.classList.contains("header-navigation-active")) {
+      setTimeout(() => {
+        headerNavigation.classList.toggle("header-navigation-active");
+      }, 150);
+    } else {
+      headerNavigation.classList.add("header-navigation-active");
+    }
+  }
+};
+
+const pressOverlayHandler = node => {
+  if (node)
+    node.addEventListener("click", event => {
+      if (event.target.classList.contains("overlay")) {
+        event.target.remove();
+        document.body.classList.toggle("overflow-hidden");
+        resetFormByDefault();
+      }
+    });
 };

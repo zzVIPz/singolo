@@ -12,6 +12,11 @@
 <body>
 
   <header class="header" id="home">
+    <div class="burger-menu">
+      <span class="burger-menu-line"></span>
+      <span class="burger-menu-line"></span>
+      <span class="burger-menu-line"></span>
+    </div>
     <a class="logo-link link" href="#">
       <h1 class="logo-title">SINGOLO<span class="logo-mark">*</span></h1>
     </a>
@@ -43,19 +48,22 @@
       <a class="slider-arrow slider-arrow-prev"></a>
       <div class="slide-wrapper">
         <div class="slide first-slide slide-active" id="slide-1">
-          <div class="vertical-iphone">
-            <img class="slider-content phone-vertical-shadow" src="./assets/slider/phone-vertical-shadow.png"
-              alt="iPhone Vertical">
-            <img class="slider-content phone-vertical" src="./assets/slider/vertical-phone.png" alt="iPhone Vertical">
-            <img class="slider-content phone-vertical-display" src="./assets/slider/phone-vertical-display.png"
-              alt="iPhone Vertical">
-          </div>
-          <div class="horizontal-iphone">
-            <img class="slider-content phone-horizontal-shadow" src="./assets/slider/phone-vertical-shadow.png"
-              alt="iPhone Vertical">
-            <img class="slider-content phone-horizontal" src="./assets/slider/vertical-phone.png" alt="iPhone Vertical">
-            <img class="slider-content phone-horizontal-display" src="./assets/slider/phone-horizontal-display.png"
-              alt="iPhone Vertical">
+          <div class="phones-wrapper">
+            <div class="vertical-iphone">
+              <img class="slider-content phone-vertical-shadow" src="./assets/slider/phone-vertical-shadow.png"
+                alt="iPhone Vertical">
+              <img class="slider-content phone-vertical" src="./assets/slider/vertical-phone.png" alt="iPhone Vertical">
+              <img class="slider-content phone-vertical-display" src="./assets/slider/phone-vertical-display.png"
+                alt="iPhone Vertical">
+            </div>
+            <div class="horizontal-iphone">
+              <img class="slider-content phone-horizontal-shadow" src="./assets/slider/phone-vertical-shadow.png"
+                alt="iPhone Vertical">
+              <img class="slider-content phone-horizontal" src="./assets/slider/vertical-phone.png"
+                alt="iPhone Vertical">
+              <img class="slider-content phone-horizontal-display" src="./assets/slider/phone-horizontal-display.png"
+                alt="iPhone Vertical">
+            </div>
           </div>
         </div>
         <div class="slide second-slide" id="slide-2">
@@ -316,7 +324,7 @@
   </main>
 
   <footer class="footer">
-    <p class="text-description">&copy; Copyright 2013</p>
+    <p class="text-description footer-copyright">&copy; Copyright 2013</p>
     <ul class="social-networks list">
       <li class="social-networks-item item-facebook"><a href="#" class="social-networks-link"></a></li>
       <li class="social-networks-item item-google"><a href="#" class="social-networks-link"></a></li>
